@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import LightRays from "./components/LightRays";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -17,11 +18,24 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.15),transparent_60%)]" />
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-black">
+      <div className="absolute inset-0">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays"
+        />
+      </div>
       
       <header className="relative z-50 mx-auto w-full max-w-7xl px-4 pt-2 md:px-12 lg:px-20">
-        <div className="flex items-center justify-end rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
+        <div className="flex items-center justify-end rounded-full border border-white/10">
           <button
             onClick={handleDownloadClick}
             className="mx-3 my-2 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:bg-gray-100 md:mx-6 md:my-4 md:px-8 md:py-3 md:text-base"
@@ -66,7 +80,6 @@ export default function Home() {
             }`}
           >
             <div className="relative">
-              <div className="absolute -inset-8 rounded-full bg-gradient-to-r from-purple-500/15 via-purple-600/20 to-purple-500/15 blur-3xl md:-inset-12" />
               <div className="relative">
                 <Image
                   src="/IMG_5682-left.png"
@@ -84,7 +97,7 @@ export default function Home() {
 
       {showPopup && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-          <div className="relative mx-4 rounded-2xl border border-white/10 bg-gray-900/95 p-8 shadow-2xl backdrop-blur-xl">
+          <div className="relative mx-4 rounded-2xl border border-white/10 bg-black p-8 shadow-2xl">
             <button
               onClick={() => setShowPopup(false)}
               className="absolute right-4 top-4 cursor-pointer text-gray-400 transition-colors hover:text-white"
