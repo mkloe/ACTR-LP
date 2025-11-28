@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import LightRays from "./components/LightRays";
 
@@ -103,6 +104,26 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <footer className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-8 md:px-12 lg:px-20">
+        <div className="flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 md:flex-row md:justify-between">
+          <p className="text-sm text-gray-400">© {new Date().getFullYear()} ActMate. All rights reserved.</p>
+          <div className="flex gap-6 text-sm">
+            <Link
+              href="/terms"
+              className="text-gray-400 transition-colors hover:text-white"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-gray-400 transition-colors hover:text-white"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
+      </footer>
 
       {showPopup && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
