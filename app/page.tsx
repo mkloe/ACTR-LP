@@ -2,16 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LightRays from "./components/LightRays";
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible] = useState<boolean>(true);
   const [showPopup, setShowPopup] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const handleDownloadClick = (e: React.MouseEvent) => {
     e.preventDefault();

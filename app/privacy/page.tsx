@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Privacy Policy for ActMate",
 };
 
-export default function PrivacyPage(): JSX.Element {
+export default function PrivacyPage() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-black">
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-12 md:px-12 md:py-20">
@@ -25,7 +25,7 @@ export default function PrivacyPage(): JSX.Element {
             <section>
               <h2 className="mb-4 text-2xl font-semibold text-white">1. Introduction</h2>
               <p>
-                ActMate ("we", "our", or "us") is committed to protecting your privacy. This
+                ActMate (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your
                 information when you use our mobile application.
               </p>
@@ -112,7 +112,7 @@ export default function PrivacyPage(): JSX.Element {
             </section>
 
             <section>
-              <h2 className="mb-4 text-2xl font-semibold text-white">8. Children's Privacy</h2>
+              <h2 className="mb-4 text-2xl font-semibold text-white">8. Children&apos;s Privacy</h2>
               <p>
                 Our service is not intended for children under the age of 13. We do not knowingly
                 collect personal information from children under 13. If you are a parent or
@@ -125,8 +125,8 @@ export default function PrivacyPage(): JSX.Element {
               <h2 className="mb-4 text-2xl font-semibold text-white">9. Changes to This Privacy Policy</h2>
               <p>
                 We may update our Privacy Policy from time to time. We will notify you of any
-                changes by posting the new Privacy Policy on this page and updating the "Last
-                updated" date.
+                changes by posting the new Privacy Policy on this page and updating the &quot;Last
+                updated&quot; date.
               </p>
             </section>
 

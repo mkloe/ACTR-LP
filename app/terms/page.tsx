@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Terms of Service for ActMate",
 };
 
-export default function TermsPage(): JSX.Element {
+export default function TermsPage() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-black">
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-12 md:px-12 md:py-20">
@@ -84,7 +84,7 @@ export default function TermsPage(): JSX.Element {
             <section>
               <h2 className="mb-4 text-2xl font-semibold text-white">7. Disclaimer</h2>
               <p>
-                The materials on ActMate are provided on an "as is" basis. ActMate makes no
+                The materials on ActMate are provided on an &quot;as is&quot; basis. ActMate makes no
                 warranties, expressed or implied, and hereby disclaims and negates all other
                 warranties including, without limitation, implied warranties or conditions of
                 merchantability, fitness for a particular purpose, or non-infringement of
