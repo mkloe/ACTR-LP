@@ -35,7 +35,16 @@ export default function Home() {
       </div>
       
       <header className="relative z-50 mx-auto w-full max-w-7xl px-4 pt-2 md:px-12 lg:px-20">
-        <div className="flex items-center justify-end rounded-full border border-white/10">
+        <div className="flex items-center justify-between rounded-full border border-white/10">
+          <div className="mx-3 my-2 md:mx-6 md:my-4">
+            <Image
+              src="/actmate.png"
+              alt="ActMate"
+              width={50}
+              height={20}
+              className="h-auto w-[40px] rounded-lg md:w-[50px]"
+            />
+          </div>
           <button
             onClick={handleDownloadClick}
             className="mx-3 my-2 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-all duration-300 hover:scale-105 hover:bg-gray-100 md:mx-6 md:my-4 md:px-8 md:py-3 md:text-base"
